@@ -1,56 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuroNest Store</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuroNest | Premium Essentials for Modern Living</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=DM+Sans:wght@400;500;700&amp;family=Inter:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#00201d",
+                        "on-secondary-container": "#006f67",
+                        "outline-variant": "#c6c6cd",
+                        "surface-variant": "#e5e2e3",
+                        "on-tertiary-container": "#968065",
+                        "error": "#ba1a1a",
+                        "primary-container": "#141b2b",
+                        "surface-tint": "#575e70",
+                        "outline": "#76777d",
+                        "surface-container-low": "#f6f3f4",
+                        "inverse-on-surface": "#f3f0f1",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#261906",
+                        "primary-fixed-dim": "#c0c6db",
+                        "surface-dim": "#dcd9db",
+                        "on-primary-fixed-variant": "#404758",
+                        "on-surface": "#1b1b1d",
+                        "on-primary-container": "#7d8497",
+                        "error-container": "#ffdad6",
+                        "primary": "#000000",
+                        "secondary-container": "#99efe5",
+                        "surface": "#fcf8fa",
+                        "on-surface-variant": "#45464c",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "on-tertiary-fixed-variant": "#55442d",
+                        "surface-bright": "#fcf8fa",
+                        "tertiary-fixed": "#f9debf",
+                        "secondary-fixed": "#9cf2e8",
+                        "surface-container-high": "#eae7e9",
+                        "tertiary-container": "#261906",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#c0c6db",
+                        "secondary": "#006a63",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e5e2e3",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#dcc2a4",
+                        "inverse-surface": "#303031",
+                        "on-primary-fixed": "#141b2b",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf8fa",
+                        "on-background": "#1b1b1d",
+                        "surface-container": "#f0edee",
+                        "secondary-fixed-dim": "#80d5cb",
+                        "primary-fixed": "#dce2f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-sm": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .luxury-shadow {
+            box-shadow: 0 10px 30px rgba(17, 24, 39, 0.05);
+        }
+        .luxury-shadow-hover:hover {
+            box-shadow: 0 20px 40px rgba(17, 24, 39, 0.08);
+            transform: translateY(-4px);
+        }
+    </style>
 </head>
-
-<body class="bg-gray-100 p-6">
-
-<!-- Header -->
-<div class="flex justify-between items-center mb-6">
-    <h1 class="text-2xl font-bold">AuroNest Store</h1>
-
-    <button onclick="showCart()" class="relative bg-black text-white px-4 py-2 rounded">
-        Cart 🛒
-        <span data-cart-count class="absolute -top-2 -right-2 bg-red-500 text-xs px-2 rounded-full">0</span>
-    </button>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-transparent backdrop-blur-md fixed top-0 w-full z-50 bg-white/10">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-8">
+<img alt="AuroNest Premium Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkec9t9AOGHoPSHKwbqEVPlFmajaaSlr_j9vBUYK2bLA7gFwjcBYiECv1dswnILt4bsog-B1cHU_uBZoQVnFQ1h8n5kMjBGYQXBdNeKNwbFH9jriebqGJIzkoDUsHd8RZVfzvp5uQ8Az0yOFlTclAQmwID1lPI7anNKBN_A4s7HTv5tgwz-fUKk87BLjlFESeAISFIcdDLoCfMUOoI9FoUknWixr0ZvqmSAHwZclW3BzAKOqNadTahtHjOPztx8uBvva57E0Zcr2Y9"/>
+<div class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium font-body-md hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-surface-variant font-medium font-body-md hover:text-secondary transition-colors duration-300" href="#">Contact Us</a>
 </div>
-
-<!-- Products -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-    <div class="bg-white p-4 rounded shadow">
-        <h2 class="font-bold">Coffee Beans</h2>
-        <p>$24</p>
-        <button onclick="addToCart('Coffee Beans', 24)" class="mt-2 bg-black text-white px-3 py-1 rounded">
-            Add to Cart
-        </button>
-    </div>
-
-    <div class="bg-white p-4 rounded shadow">
-        <h2 class="font-bold">Hand Wash</h2>
-        <p>$18</p>
-        <button onclick="addToCart('Hand Wash', 18)" class="mt-2 bg-black text-white px-3 py-1 rounded">
-            Add to Cart
-        </button>
-    </div>
-
-    <div class="bg-white p-4 rounded shadow">
-        <h2 class="font-bold">Floor Cleaner</h2>
-        <p>$34</p>
-        <button onclick="addToCart('Floor Cleaner', 32)" class="mt-2 bg-black text-white px-3 py-1 rounded">
-            Add to Cart
-        </button>
-    </div>
-
 </div>
-
-<!-- JS -->
-<script src="script.js"></script>
-
-</body>
-</html>
+<div class="flex items-center gap-stack-md">
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container-low rounded-full transition-colors">shopping_cart</button>
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container-low rounded-full transition-colors">person</button>
+<button class="md:hidden material-symbols-outlined text-primary">menu</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Banner -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="z-10 order-2 lg:order-1">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">ELEVATED LIFESTYLE ESSENTIALS</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-md">
+                        Premium Everyday Essentials for Modern Living
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-lg">
+                        Experience the perfect blend of luxury and utility. Our curated collection of home care and artisanal coffee brings sophistication to your daily rituals.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-bold text-body-md hover:opacity-90 transition-all luxury-shadow">
+                            Shop Now
+                        </button>
+<button class="border border-secondary text-secondary px-8 py-4 rounded-md font-bold text-body-md hover:bg-secondary-container transition-all">
+                            Explore Products
+                        </button>
+</div>
+</div>
+<div class="relative h-[500px] lg:h-[700px] order-1 lg:order-2">
+<div class="absolute inset-0 grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="h-2/3 rounded-xl overflow-hidden luxury-shadow">
+<img class="w-full h-full object-cover" data-alt="Close-up of premium coffee beans in a matte black ceramic bowl, soft morning sunlight hitting the textured surface. The background is a minimalist, off-white kitchen marble countertop with high-key lighting creating a serene and luxurious aesthetic. Muted tones of deep brown and cream dominate the palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiqwWAle_QCHtZM-lyNpdizt0j96jzzic032q65QdPQqfaLIrBsKxc-K_J3aow88SBlyuoDTQBHTUXhQclLgLboedjEGtxOOAlc6r2Wuf9syym7u7xa1xJw3awTxUQtVvXRsMr6uXO6E2SuuIejWBAu0gQZWbmY6vn6H59CD8zNZpk4fArYLgNBMWr2WcPT4nVOHpDauQ8MJo3_rhavlhDp62sEIIR4nVlXyS1IPwJhYzdjHk2G8qWkFYdkxiQ_VkUwuNYZTqL9u7y"/>
+</div>
+<div class="h-1/3 rounded-xl overflow-hidden luxury-shadow">
+<img class="w-full h-full object-cover" data-alt="A sleek, minimalist glass hand wash bottle with a matte black pump, standing on a white porcelain sink. Clear liquid inside catching the light, reflecting a clean and modern bathroom environment. The photography is editorial and high-contrast, focusing on purity and hygiene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVmWm9-jfdYgiqebwY_3egsRyD22GEg2dl7MfVj_ol868NphpyvPXwosHV34LAEEIBZF6ZWVEPZ8hvBXCBvWh4bfL2tAVqvHkZnBzzMu5zVqWgr4pbRobZ458dioy9Wv23fViWrKjuManzsrF063RlBef6uc6jqEnYYDes1JtFAO73fVICD9c8BctBXcT_wVGDseql8s-e4_osVL8lz4OPPW8SRgv_cAQABMw2M6-9tllPJz2dj1iU1qnJaaeXDf-tccBzv9pu3lJx"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="h-1/3 rounded-xl overflow-hidden luxury-shadow">
+<img class="w-full h-full object-cover" data-alt="A minimalist living room floor featuring high-quality oak planks, clean and reflecting a soft, warm light. The shot is low-angle, emphasizing cleanliness and the premium feel of the floor cleaner used. The atmosphere is calm and inviting, with a modern minimalist interior design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnUqu5pBxJmrzaE8ggMUuIbqJgF9rR_bs51KGOuVIQ41bAqG_ahG6q8uvys4iPEkFlSE-LympztGi3TikP807QZCrcfkOMFUhtO78OixjEmdkHErmdNqpuCXmY6bxs0M4doOdDnmq4oUHoWWX7XLuNdqVUH7VKS3NJHVP9Fu2RwX9Xe_7cuCPamI5Nu2C-Y84amhNJMB2sUYi2uQwVtHyhaQUGJPs6SwXhuEwWAPnLJq-8daafnXGrHUPeIhcpo79D-_ezOsU_sLgX"/>
+</div>
+<div class="h-2/3 rounded-xl overflow-hidden luxury-shadow">
+<img class="w-full h-full object-cover" data-alt="Artisanal lifestyle shot of a steaming cup of coffee next to a linen napkin on a light wood table. The lighting is soft and diffused, creating an atmosphere of calm confidence and accessible luxury. Sophisticated muted palette with warm wood and cream accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM_aUOJTK7IDpu52rqjlXicsp0yZycBnefrWRNglrMMc3teXgOEH56yLVJ0WodPWSjVlibMwHzbD7L2TXwz26z0_0jg0QGe9Fpx5ldJ4_XdU9bnzaDsTQO8urnRPBpi32RGpJt3mPebgTq0U2mSeoJvAxqZOnN1i3arVE1hGc2c0EPnXq_QeAYfyKlSyNP0ca9jo4SZVIC3A8cGcGmWhqXXWIJDyuTFi3QXC43P42FrBa5bs7sX--lSdasdBbo6azZ_5P0hLIwHAFs"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Categories Grid -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Curated Collections</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Exceptional quality in every category</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Category 1 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden luxury-shadow transition-transform hover:-translate-y-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Premium dark roasted coffee beans in a professional minimalist burlap sack, set against a clean studio background. Soft, diffused lighting highlights the rich texture of the beans. Professional FMCG product photography style with a focus on artisanal quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQunlfJcBjNtZiwH29hk4bRBf4LtnnkUzb4TtbGZTwycA6hVTLqIN8fIfsGwlsvn6wWo-YTSgELXaKE6hL9vCo_VjinuGl3Dtu7hPZA7dU0cTGtgpqlAv1eRJBNmf1_52EySCy2i_KJU3IDCIM_DxJmEJ8xdhEW_MVyEFEMhMKjHwRMvRH1yFrmsmynnOttzk9IpoLz3WU7A9gFfclmTfS3FkHywnBjGEK-QdBgQbKkqEwv9kdWbYoX1rSWa807jyOkiAv02paZArz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="font-headline-sm text-white mb-2">Coffee Beans</h3>
+<a class="text-white font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden luxury-shadow transition-transform hover:-translate-y-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern hand wash station featuring a designer bottle with an elegant label. Water droplets on the bottle convey freshness. Bright, airy bathroom setting with a high-end spa aesthetic. Muted teal and off-white color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0YfvgxnxD4zrHtn1i7wfp5xT-xk-wL9rUHfTbUqTrCV_7dvJwkJUSoL6TTfF5foMYFxcRQ0zw2uT_nL9aBh3f2paAQ9Tt-wZ60ujD0Bbxf_tAbp2I1jucuJkY-RTB6N8StNZ670Kh8bzGPHuqULUNrlv_F5kxdB3gHENUC7_aaFrxFzNqZr5woQKobcJUG0q_7WcHLt2P-Kjfxg9EfhmRqrus4ZU9enBs8Vc50UBeRKG0C8ELY1dW2RTON3-Cgg4uQl5Lxe3jR8V-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="font-headline-sm text-white mb-2">Hand Wash</h3>
+<a class="text-white font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden luxury-shadow transition-transform hover:-translate-y-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a premium floor cleaner pouring into a clear bucket of water, creating elegant bubbles. Sunlight through a window illuminates the scene. Focus on transparency and high-quality liquid consistency. Clean, modern domestic environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU94ehsWqXVGpaxAQJvAJoye_bwxDGz2-Yb9-3n4Hc3Zm9TClxemRKRQvleugAhQb0lDfOofE06rRka-B88VeG4Ofa0lrr9mgnkZXlj0vij8IW8jecOB3hb-c5psdROESgTwmiH_-KvKJEboz9aAdQJf5MRIeZFLkNedjzAElP_UOON22uHnR_QY-kU0vM5Y3hsXt6KEbNfuxhWGvA5ETUfQAYOBvSbd-ZRN0H0_MbBx_GYduuiOU3vP_Yd6qu9zsiy_IZiIuQA4xq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="font-headline-sm text-white mb-2">Floor Cleaner</h3>
+<a class="text-white font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden luxury-shadow transition-transform hover:-translate-y-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Immaculate modern bathroom with white marble tiling, showcasing the effectiveness of premium bathroom cleaners. High-key lighting, extremely clean and bright aesthetic. Minimalist and professional look conveying trust and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzjIB0K6jxIzcuhqU2iv1ZfOLWutBR4rXMHl26O4iHRIme1KaqNo322_7VrwfC6wWU6C-5FpKir5zEFy1llWTzzTeE65XMc9yDKOM15UsVRNW5kIIBR_SqwopFdmNRTrBiRWuvYL_CRsEPCMfzxIXzxO-Ne44PAD35mnGDBaogxhdvreOJmUmLcvxc562SV-6MR7LZ5wT8g9orH4IaAVsWrn4Rlx6kxwXn6fdWeNScXqpGbUtNAHreWaJZUITPkOfuukZTJdgmR1lF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="font-headline-sm text-white mb-2">Bathroom Cleaner</h3>
+<a class="text-white font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Selling Products -->
+<section class="py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Bestsellers</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The essentials our community loves most.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 font-label-caps text-secondary">View All <span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+<!-- Product Card -->
+<div class="glass-card p-6 rounded-xl luxury-shadow luxury-shadow-hover transition-all group">
+<div class="bg-surface-container-low rounded-lg aspect-square mb-6 overflow-hidden relative">
+<img class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform" data-alt="A premium 250g bag of coffee beans with minimalist black and gold typography. The product is center-framed on a light gray background with soft ambient shadows. High-end retail packaging photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmRzPtRdCuwJdzP3h7VWYfHiUyHXQHNG93nG0TwoW2SYNjC8h7kV44DN-dCVGYf7rw0-yesYCsP3H8eddo2mtW8feATVWunSSKFk4vgcJ8diHxT27tlkMlZYGEV9VeG6CtqvYJLRYMzmFZD4xOHisDSQ9eSvcLG1UcOa6ab1L7u7G9G2Vuxn23KUYsXP6nTRQaeHBtrJI9lNOoydmBB9pSvjLFhirOUbyOcyQ_7-Oc1qbozABA5dVGWoXunI0MfVj8ti2PcExMCSpg"/>
+<span class="absolute top-4 left-4 bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">New</span>
+</div>
+<h4 class="font-headline-sm text-primary mb-1">Estate Blend Coffee</h4>
+<p class="text-on-surface-variant text-body-sm mb-4">Artisanal medium roast with notes of chocolate.</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-headline-sm text-primary">$24.00</span>
+<button class="bg-primary text-on-primary p-3 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="glass-card p-6 rounded-xl luxury-shadow luxury-shadow-hover transition-all group">
+<div class="bg-surface-container-low rounded-lg aspect-square mb-6 overflow-hidden relative">
+<img class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform" data-alt="A designer dispenser bottle of hand wash with a transparent teal liquid. The lighting is bright and clean, emphasizing the clarity of the product. Set on a white reflective surface for a premium look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuTXI021e0380u-N5RXt5WHzDOX9XBJLhSkDb8XZsmZoN6G0joHiwyEEsqYVFM4b6D2FPSy4t7COAbFyJWc_edYck7PzNi-aLfZ5402viA_Cyc0VhUICGCM4ZL6_cgdGNlYyhSo_yNbsAZKsbAiLpGuBiyRyYoCQwwolIdJ3woMA6MBvTF1j_XUN6RmUbkdVjFky95xbndvCNdd33hm_M6lUWqDAFO4eWW_aDpXZLxoD976HoTnDgETPHFg3JQlTE0J-hw_jx9sVCT"/>
+</div>
+<h4 class="font-headline-sm text-primary mb-1">Ocean Breeze Hand Wash</h4>
+<p class="text-on-surface-variant text-body-sm mb-4">Infused with essential oils for a spa-like feel.</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-headline-sm text-primary">$18.50</span>
+<button class="bg-primary text-on-primary p-3 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="glass-card p-6 rounded-xl luxury-shadow luxury-shadow-hover transition-all group">
+<div class="bg-surface-container-low rounded-lg aspect-square mb-6 overflow-hidden relative">
+<img class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform" data-alt="Professional grade floor cleaner in a sleek matte white container with bold, modern typography. The shot is clean and minimalist, focused on the product's premium industrial design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrlfiuvzgnYVGU2AzcV1aAcvv5Pid30rAHX5XDNbWSl2dE1LgLwhvIC2GMzKsFiyJAENbJqsz95Sn0HMN9QfowXVzB-8Nay-Tit7DOtDTIhGsIq2-yX-6uYfSr8T3ZDoFJzX-5CyMz7D5gKjzQJ4WmcdHWNrIvULZF5Y-EkJGkWQzfXa0yoD4dFNgso-naR7uIeq2s6BPUG85zc5omOurb6Jq6e08fLoz8ZeZTrJGf7Y-z24CDa2eqZVxsqvQpZYKbdx5XPaAY_Rjg"/>
+</div>
+<h4 class="font-headline-sm text-primary mb-1">Eco-Clean Floor Ritual</h4>
+<p class="text-on-surface-variant text-body-sm mb-4">Deep cleaning action for all surface types.</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-headline-sm text-primary">$32.00</span>
+<button class="bg-primary text-on-primary p-3 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose AuroNest -->
+<section class="py-section-padding bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 luxury-shadow">
+<span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+</div>
+<h5 class="font-headline-sm text-primary mb-2">Premium Quality</h5>
+<p class="text-on-surface-variant text-body-sm">Sourced and formulated with the finest ingredients only.</p>
+</div>
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 luxury-shadow">
+<span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+</div>
+<h5 class="font-headline-sm text-primary mb-2">Affordable Luxury</h5>
+<p class="text-on-surface-variant text-body-sm">High-end essentials that fit into your daily lifestyle.</p>
+</div>
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 luxury-shadow">
+<span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
+</div>
+<h5 class="font-headline-sm text-primary mb-2">Fast Delivery</h5>
+<p class="text-on-surface-variant text-body-sm">Efficient logistics ensuring your home is always stocked.</p>
+</div>
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 luxury-shadow">
+<span class="material-symbols-outlined text-secondary text-3xl">ShieldCheck</span>
+</div>
+<h5 class="font-headline-sm text-primary mb-2">Trusted Care</h5>
+<p class="text-on-surface-variant text-body-sm">Safe, effective formulas for you and your family.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Wholesale Section -->
+<section class="py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-container rounded-3xl p-12 md:p-20 relative overflow-hidden luxury-shadow">
+<div class="relative z-10 max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary-fixed mb-4 block">PARTNER WITH US</span>
+<h2 class="font-display-lg text-white mb-6">Become a Dealer or Wholesale Partner</h2>
+<p class="text-on-primary-container font-body-lg mb-stack-lg">
+                            Elevate your business with our premium FMCG line. Join our global network of distributors and bring AuroNest's quality to your customers.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-md font-bold text-body-md hover:bg-on-secondary-container transition-all">
+                                Contact Sales
+                            </button>
+<button class="border border-outline text-white px-8 py-4 rounded-md font-bold text-body-md hover:bg-white/10 transition-all">
+                                View Wholesale Portal
+                            </button>
+</div>
+</div>
+<!-- Abstract Background Element -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="absolute top-0 right-0 h-full hidden lg:block">
+<img class="h-full w-auto opacity-30 grayscale mix-blend-overlay" data-alt="A professional business meeting in a modern, sun-drenched office. Focus on a digital tablet showing product inventory spreadsheets. The atmosphere is professional, sleek, and high-trust. Deep navy and teal accents reflect the corporate branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0tSr8m7jKZxX3oJVwOgv6CNGfyJQIMXHHgvHuMmIY7wujFKGfLERI9_rptvBV8ScZFfD-11SB22ujLPRx_Jp0vRmlR6O9lQp3MUjoxlII_YuJgbbL38_9j6DtVXCS35wpUQ9S5HhHmJFSFIGqXvQXrdZDv_vZaJDjaY8dnNN10NqDYpkJW83iGCDw5m80JoK_JxOtLkWMI2PO4t3OCBLkMyuHnz3MNXr3wQ3tvzOyeTgiI-HzD0MSaS5LDFENT07gA9DBDZS5aTLd"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-md text-headline-md text-primary mb-16">Trusted by Modern Homemakers</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-xl glass-card luxury-shadow text-left">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-body-md mb-6 italic">"The quality of the floor cleaner is unmatched. It leaves a scent that feels like a high-end spa, not a chemical laboratory."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-secondary-fixed rounded-full"></div>
+<div>
+<h6 class="font-bold text-body-sm text-primary">Sarah J.</h6>
+<p class="text-on-surface-variant text-[12px]">Premium Subscriber</p>
+</div>
+</div>
+</div>
+<div class="p-8 rounded-xl glass-card luxury-shadow text-left">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-body-md mb-6 italic">"Their coffee blend is the highlight of my morning. You can really taste the freshness and care in the roasting process."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-full"></div>
+<div>
+<h6 class="font-bold text-body-sm text-primary">Marcus K.</h6>
+<p class="text-on-surface-variant text-[12px]">Retail Partner</p>
+</div>
+</div>
+</div>
+<div class="p-8 rounded-xl glass-card luxury-shadow text-left">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-body-md mb-6 italic">"AuroNest has transformed my daily chores into something I actually enjoy. The packaging alone is a work of art."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-fixed-dim rounded-full"></div>
+<div>
+<h6 class="font-bold text-body-sm text-primary">Elena W.</h6>
+<p class="text-on-surface-variant text-[12px]">Interior Designer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-section-padding max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<img alt="AuroNest Premium Logo" class="h-8 w-auto mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkec9t9AOGHoPSHKwbqEVPlFmajaaSlr_j9vBUYK2bLA7gFwjcBYiECv1dswnILt4bsog-B1cHU_uBZoQVnFQ1h8n5kMjBGYQXBdNeKNwbFH9jriebqGJIzkoDUsHd8RZVfzvp5uQ8Az0yOFlTclAQmwID1lPI7anNKBN_A4s7HTv5tgwz-fUKk87BLjlFESeAISFIcdDLoCfMUOoI9FoUknWixr0ZvqmSAHwZclW3BzAKOqNadTahtHjOPztx8uBvva57E0Zcr2Y9"/>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mb-8">
+                    Elevating the everyday through curated premium essentials for the modern home. Accessible luxury delivered to your doorstep.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h6 class="font-bold text-primary mb-6">Company</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">Sustainability</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">Wholesale Portal</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h6 class="font-bold text-primary mb-6">Support</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">Shipping Info</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">FAQ</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h6 class="font-bold text-primary mb-6">Join the Nest</h6>
+<p class="text-on-surface-variant text-body-sm mb-4">Subscribe for early access to new product drops and exclusive editorial content.</p>
+<div class="flex">
+<input class="bg-white border-outline flex-1 rounded-l-md px-4 py-3 focus:ring-secondary focus:border-secondary outline-none" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-white px-6 py-3 rounded-r-md font-bold hover:bg-opacity-90 transition-all">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant py-8 text-center px-margin-mobile">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 AuroNest.co. Premium Essentials for Modern Living.</p>
+</div>
+</footer>
+</body></html>
